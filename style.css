@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+:root{
+
+/* ### Primary */
+
+    --Strong-cyan: hsl(172, 67%, 45%);
+
+/* ### Neutral */
+
+    --Very-dark-cyan: hsl(183, 100%, 15%);
+    --Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --Dark-grayish-cyan2: hsl(184, 14%, 56%);
+    --Light-grayish-cyan: hsl(185, 41%, 84%);
+    --Light-grayish-cyan2: hsl(189, 41%, 97%);
+    --White: hsl(0, 0%, 100%);
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Space Mono", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    background-color: var(--Light-grayish-cyan);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    font-weight: 700;
+    color: var(--Very-dark-cyan);
+}
+
+.mainContainer {
+    width: 375px;
+    padding: 2rem;
+    background-color: var(--White);
+    border-radius: 15px;
+    margin-bottom: 2rem;
+    font-size: 15px;
+    color: var(--Very-dark-cyan);
+}
+
+.billPart {
+    margin-bottom: 1rem;
+}
+
+.billTitle {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.inputs {
+    background-color: var(--Light-grayish-cyan2);
+    border-color: transparent;
+    text-align: right;
+    font-family: "Space Mono", sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--Very-dark-cyan);
+    width: 100%;
+    border-radius: 5px;    
+    background-repeat: no-repeat;
+    background-position: left;
+    background-position-x: 0.5rem;
+    background-size: 0.5rem;
+    padding-right: 1rem;
+}
+
+#billInput {
+    background-image: url("./images/icon-dollar.svg");
+}
+
+.tipPart {
+    margin-bottom: 1rem;
+}
+
+.tipTitle {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.percButtons {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 0.5rem;
+}
+
+.formButtons {
+    font-family: "Space Mono", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    border-color: transparent;
+    border-radius: 5px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.percButtons .percentButton {
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+}
+
+.percentButton.active {
+    color: var(--Very-dark-cyan);
+    animation-name: colorChange;
+    animation-duration: 0.2s;
+    background-color: var(--Strong-cyan);
+}
+
+.numberOfPeoplePart {
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.numberOfPeopleTitle {
+    margin-bottom: 0.5rem;
+}
+
+#numberOfPeopleInput {
+    background-image: url("./images/icon-person.svg");
+}
+
+.totalPart {
+    background-color: var(--Very-dark-cyan);
+    color: var(--White);
+    padding: 2rem 1rem 1rem 1rem;
+    border-radius: 15px;
+}
+
+.sumPart {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.sumPart .totalGrey {
+    color: var(--Dark-grayish-cyan2);
+    font-size: 12px;
+}
+
+.totalNum {
+    width: 100%;
+    text-align: right;
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--Strong-cyan);
+}
+
+.resetButton {
+    width: 100%;
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    text-transform: uppercase;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@keyframes colorChange {
+    from {background-color: var(--Very-dark-cyan)}
+    to {background-color: var(--Strong-cyan);} 
+}
